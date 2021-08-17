@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/home.css" />
+    <script
+      src="https://kit.fontawesome.com/7c1e973e41.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="home-page">
+      <!--Nav Bar-->
+      <div>
+        <nav id="nav">
+          <ul class="navbar">
+            <li class="navbar-link" onclick="toggleNavbar()">
+              <a href="#home-page">HOME</a>
+            </li>
+            <li
+              class="navbar-link"
+              onsubmit="viewProfile(document.querySelector('.fullname').value, document.querySelector('.user-id').value, document.querySelector('.user-email').value, document.querySelector('.profile-username').value, document.querySelector('.profile-password').value); return false"
+            >
+              <a href="#products">PRODUCTS</a>
+            </li>
+            <li class="navbar-link" onclick="toggleNavbar()">
+              <a href="#profile">PROFILE</a>
+            </li>
+            <li class="navbar-link" onclick="toggleNavbar()">
+              <a href="#cart">CART</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!--Product Card-->
+      <div id="products">
+        <div class="product-container"></div>
+      </div>
+    </section>
+    <section id="product-section">
+      <div class="create-product">
+        <h2>Add new product</h2>
+        <form>
+          <input type="text" class="product_name" placeholder="Product Name" />
+          <input type="text" class="category" placeholder="Type" />
+          <input type="text" class="description" placeholder="Description" />
+          <input type="text" class="dimensions" placeholder="Quantity" />
+          <input type="text" class="price" placeholder="Price" />
+          <input type="text" class="id" placeholder="User Id" />
+          <input
+            type="file"
+            class="product_image"
+            placeholder="Product Image"
+          />
+          <button
+            class="newProduct_button"
+            onsubmit="addProduct(document.querySelector('.product_name').value, document.querySelector('.product_image')[1].value,document.querySelector('.category')[1].value, document.querySelector('.description').value, document.querySelectorAll('.quantity')[1].value, document.querySelectorAll('.price')[1].value, document.querySelector('.product_id').value); return false"
+          >
+            Add Product
+          </button>
+        </form>
+      </div>
+    </section>
+    <script src="/scripts.js"></script>
+    <script src="/"></script>
+  </body>
+</html>

@@ -119,11 +119,11 @@ showProducts();
 function addProduct(
   product_name,
   product_image,
-  category,
+  type,
   description,
-  dimensions,
+  quantity,
   price,
-  id
+  product_id
 ) {
   fetch("https://lee-buka29.herokuapp.com/create-products/", {
     method: "POST",
@@ -134,7 +134,7 @@ function addProduct(
       description: `${description}`,
       quantity: `${quantity}`,
       price: `${price}`,
-      id: `${id}`,
+      id: `${product_id}`,
     }),
     headers: {
       "Content-Type": "application/json",

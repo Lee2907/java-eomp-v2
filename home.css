@@ -5,7 +5,7 @@ body {
   font-weight: 700;
   height: 100%;
   color: rgb(241, 136, 117);
-  /* background-image: url(/images/beige.png.jpg); */
+  /* background-image: url(images/Forever B-G.png); */
   object-fit: cover;
   background-color: rgb(240, 202, 163);
 }
@@ -18,7 +18,7 @@ body {
 }
 
 #nav {
-  background-color: rgb(241, 136, 117);
+  background-color: yellow;
   width: 100vw;
   position: fixed;
   top: 0;

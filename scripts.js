@@ -37,7 +37,7 @@ function signUp(name, surname, email, username, password) {
   console.log(email);
   console.log(username);
   console.log(password);
-  fetch("https://lee-buka29.herokuapp.com/user-registration/", {
+  fetch("https://lee-buka29.herokuapp.com/register/", {
     method: "POST",
     body: JSON.stringify({
       name: `${name}`,
@@ -115,6 +115,21 @@ function showProducts() {
 }
 
 showProducts();
+
+function previewFile() {
+  const image = document.querySelector('.imageup');
+  const file = document.querySelector('#aimage').files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener("load", function () {
+    // convert image file to base64 string
+    image.src = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
 
 function addProduct(
   product_name,

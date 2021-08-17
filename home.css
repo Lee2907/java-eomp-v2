@@ -5,7 +5,7 @@ body {
   font-weight: 700;
   height: 100%;
   color: rgb(241, 136, 117);
-  /* background-image: url(images/Forever B-G.png); */
+  /* background-image: url(./images/Forever B-G.png); */
   object-fit: cover;
   background-color: rgb(240, 202, 163);
 }
